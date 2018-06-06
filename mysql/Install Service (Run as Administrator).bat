@@ -1,0 +1,2 @@
+"D:\Program\MySQL\MySQL Server 5.7\bin\mysqld.exe" --initialize --basedir="D:/Program/MySQL/MySQL Server 5.7" --datadir="D:/Program/MySQL/datas"
+"D:\Program\MySQL\MySQL Server 5.7\bin\mysqld.exe" --install MySQL --defaults-file=D:/Program/MySQL/my.ini
