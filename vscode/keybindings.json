@@ -1,0 +1,21 @@
+// 将键绑定放在此文件中以覆盖默认值auto[]
+[
+    {
+        "key": "alt+cmd+up",
+        "command": "-workbench.action.terminal.focusPreviousPane",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "alt+cmd+down",
+        "command": "-workbench.action.terminal.focusNextPane",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "alt+cmd+down",
+        "command": "workbench.action.terminal.focusNext"
+    },
+    {
+        "key": "alt+cmd+up",
+        "command": "workbench.action.terminal.focusPrevious"
+    }
+]

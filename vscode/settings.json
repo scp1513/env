@@ -1,16 +1,37 @@
 {
-    "terminal.integrated.shell.windows": "C:\\Windows\\System32\\bash.exe",
-    "extensions.autoUpdate": false,
-    "explorer.autoReveal": false,
     "editor.minimap.enabled": false,
+    "explorer.autoReveal": false,
+    "extensions.autoUpdate": false,
 
-    "files.exclude": {
-        "**/.git": true,
-        "**/.svn": true,
-        "**/.hg": true,
-        "**/CVS": true,
-        "**/.DS_Store": true,
-        "**/~$*.xlsx": true,
-        "**/~$*.docx": true
-    }
+    "terminal.integrated.shell.osx": "/bin/zsh",
+    "terminal.integrated.shell.windows": "C:\\Windows\\System32\\bash.exe",
+    "terminal.integrated.rendererType": "dom",
+
+    "window.zoomLevel": 0,
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#5f00af",
+        "statusBar.noFolderBackground": "#5f00af",
+        "statusBar.debuggingBackground": "#5f00af"
+    },
+    "workbench.iconTheme": "vscode-icons",
+
+    "vim.statusBarColorControl": false,
+    "vim.foldfix": true,
+    "vim.hlsearch": true,
+    "vim.ignorecase": false,
+
+    "gitlens.blame.avatars": false,
+    "gitlens.blame.dateFormat": "YYYY-M-D H:m:s",
+    "gitlens.currentLine.dateFormat": "YYYY-M-D H:m:s",
+    "gitlens.defaultDateShortFormat": "",
+    "gitlens.defaultDateStyle": "absolute",
+    "gitlens.defaultDateFormat": "YYYY-M-D H:m:s",
+
+    "go.formatTool": "goimports",
+    "go.lintTool": "golangci-lint",
+    "go.enableCodeLens": {
+        "references": false,
+        "runtest": true
+    },
+    "go.testFlags": [ "-v" ],
 }
