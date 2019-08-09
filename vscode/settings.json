@@ -13,7 +13,6 @@
         "statusBar.noFolderBackground": "#5f00af",
         "statusBar.debuggingBackground": "#5f00af"
     },
-    "workbench.iconTheme": "vscode-icons",
 
     "vim.statusBarColorControl": false,
     "vim.foldfix": true,
@@ -33,5 +32,11 @@
         "references": false,
         "runtest": true
     },
-    "go.testFlags": [ "-v" ],
+    "go.testFlags": [
+        "-v"
+    ],
+    "go.useLanguageServer": true,
+    "vsicons.dontShowNewVersionMessage": true,
+    "workbench.sideBar.location": "left",
+    "workbench.iconTheme": "vscode-icons",
 }
