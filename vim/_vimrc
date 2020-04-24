@@ -1,0 +1,155 @@
+" vundle
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+" plugin on GitHub repo
+"Plugin 'tpope/vim-fugitive'
+" plugin from http://vim-scripts.org/vim/scripts.html
+" Plugin 'L9'
+" Git plugin not hosted on GitHub
+"Plugin 'git://git.wincent.com/command-t.git'
+" git repos on your local machine (i.e. when working on your own plugin)
+"Plugin 'file:///home/gmarik/path/to/plugin'
+" The sparkup vim script is in a subdirectory of this repo called vim.
+" Pass the path to set the runtimepath properly.
+"Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+" Install L9 and avoid a Naming conflict if you've already installed a
+" different version somewhere else.
+" Plugin 'ascenator/L9', {'name': 'newL9'}
+
+Plugin 'fatih/vim-go'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'yuttie/hydrangea-vim'
+Plugin 'rakr/vim-one'
+Plugin 'bling/vim-airline'
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+
+
+" vim-go
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
+
+
+" custom
+syntax on
+
+set nu
+set hls
+set mouse=a
+set foldmethod=syntax
+
+" coloeschema
+"colorscheme hydrangea
+colorscheme one
+set background=dark
+"let g:lightline = {
+"     \ 'colorscheme': 'hydrangea',
+"     \ 'component': {
+"     \   'readonly': '%{&readonly?"":""}',
+"     \ },
+"     \ 'separator':    { 'left': '', 'right': '' },
+"     \ 'subseparator': { 'left': '', 'right': '' },
+"     \ }
+
+" fold
+set foldenable              " 开始折叠
+set foldmethod=syntax       " 设置语法折叠
+set foldcolumn=0            " 设置折叠区域的宽度
+setlocal foldlevel=1        " 设置折叠层数为
+set foldlevelstart=99       " 打开文件是默认不折叠代码
+
+
+"let g:airline_theme='light'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+
+
+" gopls
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
+
+"let g:go_fold_enable=[]
+
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_generate_tags = 1
+let g:go_highlight_variable_declarations = 1
+let g:go_highlight_variable_assignments = 1
+let g:go_highlight_function_parameters = 1
+
+au FileType go nmap <Leader>i <Plug>(go-info)
+au FileType go nmap <Leader>gd <Plug>(go-doc)
+au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <leader>t <Plug>(go-test)
+au FileType go nmap <leader>c <Plug>(go-coverage)
+au FileType go nmap gd <Plug>(go-def-tab)
+
+
+" nerdtree
+map <F2> :NERDTreeToggle<CR>
+
+
+" buffer
+nnoremap <S-TAB> :bn<CR>
+nnoremap <C-TAB> :bp<CR>
+
+map <leader>bda :call DeleteAllBuffersInWindow()<CR>
+function! DeleteAllBuffersInWindow()
+    let s:curWinNr = winnr()
+    if winbufnr(s:curWinNr) == 1
+        ret
+    endif
+    let s:curBufNr = bufnr("%")
+    exe "bn"
+    let s:nextBufNr = bufnr("%")
+    while s:nextBufNr != s:curBufNr
+        exe "bn"
+        exe "bdel ".s:nextBufNr
+        let s:nextBufNr = bufnr("%")
+    endwhile
+endfunction
+
+map <leader>1 :b1<CR>
+map <leader>2 :b2<CR>
+map <leader>3 :b3<CR>
+map <leader>4 :b4<CR>
+map <leader>5 :b5<CR>
+map <leader>6 :b6<CR>
+map <leader>7 :b7<CR>
+map <leader>8 :b8<CR>
+map <leader>9 :b9<CR>
+map <leader>0 :b10<CR>
+

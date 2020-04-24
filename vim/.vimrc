@@ -8,8 +8,8 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'gmarik/vundle'
-Plugin 'fatih/vim-go'
-Plugin 'Blackrush/vim-gocode'
+"Plugin 'fatih/vim-go'
+"Plugin 'Blackrush/vim-gocode'
 Plugin 'alvan/vim-closetag'
 call vundle#end()
 filetype plugin indent on
