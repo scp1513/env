@@ -45,10 +45,6 @@
             "commands": [":q!"]
         },
         {
-            "before": [":"],
-            "commands": ["workbench.action.showCommands"]
-        },
-        {
             "before": ["CTRL+F"],
             "commands": ["actions.find"]
         }
@@ -63,8 +59,8 @@
             "commands": [":q!"]
         },
         {
-            "before": [":"],
-            "commands": ["workbench.action.showCommands"]
+            "before": ["CTRL+F"],
+            "commands": ["actions.find"]
         }
     ],
 
