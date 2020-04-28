@@ -2,6 +2,10 @@
     "editor.minimap.enabled": false,
     "explorer.autoReveal": false,
     "extensions.autoUpdate": false,
+    "extensions.ignoreRecommendations": false,
+    "diffEditor.ignoreTrimWhitespace": true,
+
+    "files.defaultLanguage": "json",
 
     "terminal.integrated.shell.osx": "/bin/zsh",
     "terminal.integrated.shell.windows": "C:\\Windows\\System32\\bash.exe",
@@ -18,6 +22,51 @@
     "vim.foldfix": true,
     "vim.hlsearch": true,
     "vim.ignorecase": false,
+    "vim.overrideCopy": false,
+    "vim.neovimPath": "/usr/local/bin/nvim",
+    "vim.useSystemClipboard": true,
+    "vim.experimentalOptimizations": true,
+    "vim.handleKeys": {
+        "CTRL+F": ""
+    },
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "j"],
+            "after": ["ESC"]
+        }
+    ],
+    "vim.normalModeKeyBindings": [
+        {
+            "before": ["Z", "Z"],
+            "commands": [":wq"]
+        },
+        {
+            "before": ["Z", "Q"],
+            "commands": [":q!"]
+        },
+        {
+            "before": [":"],
+            "commands": ["workbench.action.showCommands"]
+        },
+        {
+            "before": ["CTRL+F"],
+            "commands": ["actions.find"]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["Z", "Z"],
+            "commands": [":wq"]
+        },
+        {
+            "before": ["Z", "Q"],
+            "commands": [":q!"]
+        },
+        {
+            "before": [":"],
+            "commands": ["workbench.action.showCommands"]
+        }
+    ],
 
     "gitlens.blame.avatars": false,
     "gitlens.blame.dateFormat": "YYYY-M-D H:m:s",
@@ -39,4 +88,5 @@
     "vsicons.dontShowNewVersionMessage": true,
     "workbench.sideBar.location": "left",
     "workbench.iconTheme": "vscode-icons",
+    "workbench.activityBar.visible": true,
 }
